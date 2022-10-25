@@ -11,7 +11,8 @@ export class CategoryService {
 
         return await this.categoriesReposity.find({
             relations:{
-                products:true
+                products:true,
+                user: true
             }
         });
     }
@@ -23,7 +24,8 @@ export class CategoryService {
                 id
             },
             relations:{
-                products:true
+                products:true,
+                user: true
             }
         });
 
@@ -39,7 +41,8 @@ export class CategoryService {
                 category: ILike(`%${category}%`)
             },
             relations:{
-                products:true
+                products:true,
+                user: true
             }
         })
     }
